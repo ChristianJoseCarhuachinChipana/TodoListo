@@ -1,11 +1,7 @@
 import { TaskItemButton } from '@/components/TaskItemButton';
 import { Check } from 'lucide-react';
 import { Trash } from 'lucide-react';
-
-type TaskItemProps = {
-  title: string;
-  completed: boolean;
-};
+import type { TaskItemProps } from '@/types';
 
 function TaskItem({ title, completed }: TaskItemProps) {
   return (

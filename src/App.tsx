@@ -7,9 +7,7 @@ function App() {
   return (
     <div className="flex items-center justify-center py-2 bg-todo-listo min-h-screen font-average-sans">
       <div className="flex flex-wrap items-center justify-center gap-3 max-w-md md:flex-row">
-        <div className="rounded-2xl overflow-hidden">
-          <img src={logo} alt="Todo Listo" className="w-40 h-auto" />
-        </div>
+        <img src={logo} alt="Todo Listo" className="w-40 h-auto rounded-2xl overflow-hidden" />
         <SearchBar />
         <TaskSection />
       </div>
