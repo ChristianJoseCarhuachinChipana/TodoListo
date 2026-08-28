@@ -1,15 +1,10 @@
 import { TaskItem } from '@/components/TaskItem';
+import type { TaskItemProps } from '@/types';
 
-const tasks = [
-  { title: 'Esta es mi primera tarea', completed: false },
-  { title: 'Comprar leche', completed: true },
-  { title: 'responder correos pendientes importantes puntuales', completed: false },
-];
-
-function TaskSection() {
+function TaskSection({ searchedTasks }: { searchedTasks: TaskItemProps[] }) {
   return (
     <div className="flex flex-col w-full">
-      {tasks.map((task) => (
+      {searchedTasks.map((task) => (
         <TaskItem key={task.title} title={task.title} completed={task.completed} />
       ))}
     </div>
