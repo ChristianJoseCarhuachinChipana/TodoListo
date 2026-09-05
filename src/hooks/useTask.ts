@@ -10,6 +10,7 @@ const tasks: TaskItemProps[] = [
 function useTask() {
   const [myTasks, setMyTasks] = useState<TaskItemProps[]>(tasks);
   const [searchTask, setSearchTask] = useState('');
+  const [openModal, setOpenModal] = useState(false);
 
   let searchedTasks: TaskItemProps[] = [];
 
@@ -38,7 +39,21 @@ function useTask() {
     setMyTasks(updatedTasks);
   }
 
-  return { searchedTasks, searchTask, setSearchTask, completeTask, deleteTask };
+  function addTask(title: string) {
+    const newTask: TaskItemProps = { title, completed: false };
+    setMyTasks([...myTasks, newTask]);
+  }
+
+  return {
+    searchedTasks,
+    searchTask,
+    setSearchTask,
+    completeTask,
+    deleteTask,
+    addTask,
+    openModal,
+    setOpenModal,
+  };
 }
 
 export { useTask };

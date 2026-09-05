@@ -6,6 +6,7 @@
 
 @theme {
   --color-primary: #92cc85;
+  --color-primary-dark: #2d6a4f;
   --color-secondary: #346f50;
   --color-background: #f5f5f5;
   --font-average-sans: 'Average Sans', sans-serif;
