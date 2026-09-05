@@ -7,7 +7,7 @@ function FormTask({
   addTask,
 }: {
   setOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
-  addTask: React.Dispatch<React.SetStateAction<string>>;
+  addTask: (title: string) => void;
 }) {
   const [newTaskTitle, setNewTaskTitle] = useState('');
 
