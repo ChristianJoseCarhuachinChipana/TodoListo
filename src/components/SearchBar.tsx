@@ -14,7 +14,7 @@ function SearchBar({
         setSearchTask(e.target.value);
       }}
       className="bg-white focus-visible:outline-none focus-visible:ring-0 focus-visible:border-primary !text-xl p-5"
-      placeholder="Ingrese tarea"
+      placeholder="Buscar tarea..."
     />
   );
 }

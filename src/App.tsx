@@ -12,6 +12,7 @@ function App() {
     searchedTasks,
     searchTask,
     setSearchTask,
+    emptySearch,
     completeTask,
     deleteTask,
     addTask,
@@ -26,7 +27,9 @@ function App() {
           <img src={logo} alt="Todo Listo" className="w-40 h-auto rounded-2xl overflow-hidden" />
           <SearchBar searchTask={searchTask} setSearchTask={setSearchTask} />
           <TaskSection
+            searchTask={searchTask}
             searchedTasks={searchedTasks}
+            emptySearch={emptySearch}
             completeTask={completeTask}
             deleteTask={deleteTask}
           />

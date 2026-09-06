@@ -35,10 +35,13 @@ function useTask() {
     setMyTasks([...myTasks, newTask]);
   }
 
+  const emptySearch = searchedTasks.length === 0 && searchTask.length > 0;
+
   return {
     searchedTasks,
     searchTask,
     setSearchTask,
+    emptySearch,
     completeTask,
     deleteTask,
     addTask,
